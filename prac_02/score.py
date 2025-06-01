@@ -1,7 +1,7 @@
 import random
 
 def main():
-    score = float(input("Enter your score (0–100): "))
+    score = float(input("Enter score (0–100): "))
     result = get_score_result(score)
     print(f"Your result: {result}")
 
