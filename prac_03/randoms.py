@@ -19,5 +19,15 @@ Line 2 could not produce a 4
 randrange(3,10,2) has step = 2 from start, so it gives values 3,5,7,9
 """
 
+print(random.uniform(2.5,5.5))  # line 3
+"""
+Line 3: 
+I saw 4.24178837067064, 5.287014182540678, 5.20274442094182,...
+Smallest possible: 2.5
+Largest possible: 5.5
+uniform(a,b) gives a float in [a,b] inclusive
+"""
 
+# Generate a random number between 1 and 100 inclusive
+print(random.randint(1, 100))
 
