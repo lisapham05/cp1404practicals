@@ -23,7 +23,7 @@ def load_data():
     return subject_data
 
 def display_subjects(data):
-    for subjects, lecturer, students in data:
-        print(f"{subject} is taught by {lecturer} and has {students} students")
+    for subjects, lecturer, number_students in data:
+        print(f"{subjects} is taught by {lecturer} and has {number_students} students")
 
 main()
