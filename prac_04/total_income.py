@@ -27,3 +27,14 @@ def main():
 
     print_report(incomes)
 
+
+def print_report(incomes):
+    print("\nIncome Report")
+    print("-------------")
+
+    cumulative_total = 0
+    for month_index, income in enumerate(incomes):
+        cumulative_total += income
+        print(f"Month {month_index + 1:2} - Income: ${income:10.2f}         Total: ${cumulative_total:10.2f}")
+
+main()
