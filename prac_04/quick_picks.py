@@ -8,6 +8,7 @@ def main():
     number_of_picks = int(input("How many quick picks? "))
     for i in range(number_of_picks):
         quick_pick = generate_quick_pick()
+        print(" ".join(f"{num:2}" for num in quick_pick))
 
 def generate_quick_pick():
     numbers = []
