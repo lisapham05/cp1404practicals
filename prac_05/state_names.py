@@ -14,7 +14,7 @@ CODE_TO_NAME = {
     "VIC": "Victoria",
     "TAS": "Tasmania",
     "SA": "South Australia"
-}
+    }
 
 for code in CODE_TO_NAME:
     print(code, end=" ")
