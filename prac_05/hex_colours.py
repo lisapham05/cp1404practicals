@@ -11,6 +11,10 @@ COLOUR_NAME_TO_HEX = {
     "camel": "#c19a6b"
 }
 
+for colour in COLOUR_NAME_TO_HEX:
+    print(colour, end=" ")
+print()
+
 colour_name = input("Enter a colour name: ").lower()
 while colour_name != "":
     if colour_name in COLOUR_NAME_TO_HEX:
