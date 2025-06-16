@@ -10,3 +10,5 @@ COLOUR_NAME_TO_HEX = {
     "cambridge blue": "#a3c1ad",
     "camel": "#c19a6b"
 }
+
+colour_name = input("Enter a colour name: ").lower()
