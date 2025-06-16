@@ -11,7 +11,9 @@ CODE_TO_NAME = {
     "NT": "Northern Territory",
     "WA": "Western Australia",
     "ACT": "Australian Capital Territory",
-    "VIC": "Victoria", "TAS": "Tasmania", "SA": "South Australia"
+    "VIC": "Victoria",
+    "TAS": "Tasmania",
+    "SA": "South Australia"
 }
 
 for code in CODE_TO_NAME:
