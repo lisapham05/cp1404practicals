@@ -20,7 +20,7 @@ def main():
 
     email_to_name[email] = name
 
-for email, name in email_to_name.items():
-    print(f"{name} ({email})")
+    for email, name in email_to_name.items():
+        print(f"{name} ({email})")
 
-
+main()
