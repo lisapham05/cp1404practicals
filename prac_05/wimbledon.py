@@ -1,7 +1,7 @@
 """
 Wimbledon Winners Data Processor
-Estimated time:
-Actual time:
+Estimated time: 15 minutes
+Actual time: 12 minutes
 """
 
 FILENAME = 'wimbledon.csv'
