@@ -14,3 +14,10 @@ COLOUR_NAME_TO_HEX = {
 print(", ".join(COLOUR_NAME_TO_HEX.keys()))
 
 colour_name = input("Enter a colour name: ").strip().upper()
+
+while colour_name != "":
+    try:
+        print(colour_name, "has the code ", COLOUR_NAME_TO_HEX[colour_name])
+    except KeyError:
+        print("Invalid colour name")
+    colour_name = input("Enter a colour name: ").strip().upper()
