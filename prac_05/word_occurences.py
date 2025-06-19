@@ -7,3 +7,5 @@ for word in words:
         word_to_count[word] += 1
     else:
         word_to_count[word] = 1
+
+max_word_length = max(len(word) for word in word_to_count)
