@@ -12,3 +12,5 @@ COLOUR_NAME_TO_HEX = {
 }
 
 print(", ".join(COLOUR_NAME_TO_HEX.keys()))
+
+colour_name = input("Enter a colour name: ").strip().upper()
