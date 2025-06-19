@@ -10,5 +10,8 @@ def main():
     while email != "":
         email = input("Email: ").strip()
 
+default_name = get_name_from_email(email)
+confirmation = input(f"Is your name {default_name}? (Y/n) ").strip().lower()
+
 
 
