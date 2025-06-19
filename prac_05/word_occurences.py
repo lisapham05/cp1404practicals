@@ -1,3 +1,7 @@
+"""
+Word occurences Program
+"""
+
 text = input("Text: ").strip().lower()
 words = text.split()
 
