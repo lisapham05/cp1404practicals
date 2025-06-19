@@ -1,3 +1,6 @@
+"""
+Hex Colour Lookup Program
+"""
 COLOUR_NAME_TO_HEX = {
     "ALICEBLUE":"#f0f8ff",
     "ANTIQUEWHITE":"#faebd7",
