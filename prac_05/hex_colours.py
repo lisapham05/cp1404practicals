@@ -10,3 +10,5 @@ COLOUR_NAME_TO_HEX = {
     "CAMEL":"#c19a6b",
     "CELESTE":"#b2ffff"
 }
+
+print(", ".join(COLOUR_NAME_TO_HEX.keys()))
