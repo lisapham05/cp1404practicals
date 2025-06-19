@@ -28,3 +28,5 @@ def count_champions(data):
 
 def extract_countries(data):
     return sorted({row[1] for row in data})
+
+main()
