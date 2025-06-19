@@ -6,6 +6,11 @@ Actual time:
 
 FILENAME = 'wimbledon.csv'
 
+def main():
+    data = read_wimbledon_data(FILENAME)
+    champions_to_wins = count_champions(data)
+    countries = extract_countries(data)
+
 def read_wimbledon_data(filename):
     with open(FILENAME, 'r', encoding='utf-8-sig') as in_file:
        data = [line.strip().split(',') for line in in_file]
