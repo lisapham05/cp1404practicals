@@ -12,10 +12,11 @@ print(" ".join(CODE_TO_NAME.keys()))
 
 state_code = input("Enter short state: ").upper()
 while state_code != "":
-    if state_code in CODE_TO_NAME:
+    try:
         print(state_code, "is", CODE_TO_NAME[state_code])
-    else:
-        print("Invalid short state")
+    except KeyError:
+        print("Invalid short states")
     state_code = input("Enter short state: ").upper()
+
 
 
