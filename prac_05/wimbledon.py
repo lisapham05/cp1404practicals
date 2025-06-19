@@ -20,3 +20,6 @@ def count_champions(data):
         else:
             champions_to_wins[champion] = 1
     return champions_to_wins
+
+def extract_countries(data):
+    return sorted({row[1] for row in data})
