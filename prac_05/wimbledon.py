@@ -1,7 +1,7 @@
 """
 Wimbledon Winners Data Processor
 Estimated time: 15 minutes
-Actual time: 12 minutes
+Actual time: 14 minutes
 """
 
 FILENAME = 'wimbledon.csv'
@@ -10,6 +10,12 @@ def main():
     data = read_wimbledon_data(FILENAME)
     champions_to_wins = count_champions(data)
     countries = extract_countries(data)
+
+    print("Wimbledon Champions:")
+    for champion, wins in champions_to_wins.items():
+        print(f"{champion} {wins}")
+    print(f"\nThese {len(countries)} countries have won Wimbledon:")
+    print(", ".join(countries))
 
 def read_wimbledon_data(filename):
     with open(FILENAME, 'r', encoding='utf-8-sig') as in_file:
