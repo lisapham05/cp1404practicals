@@ -1,8 +1,8 @@
 """
 Program: languages.py
 
-Estimated time:
-Actual time:
+Estimated time: 20 minutes
+Actual time: 10 minutes
 
 """
 
