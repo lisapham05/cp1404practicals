@@ -20,7 +20,7 @@ def main():
 
     print(f"Limo has {limo.fuel} fuel.")
 
-    # Attempt to drive the cả 115 km
+    # Attempt to drive the car 115 km
     limo.drive(115)
 
     print(limo)
