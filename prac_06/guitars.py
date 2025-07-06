@@ -6,7 +6,7 @@ def main():
     guitars = []
 
     name = input("Name: ")
-    while name != "":
+    while name:
         year = int(input("Year: "))
         cost = float(input("Cost: $"))
         guitar = Guitar(name, year, cost)
@@ -16,7 +16,7 @@ def main():
 
         name = input("Name: ")
 
-    # For Testing
+    #For Testing
     guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
 
