@@ -18,5 +18,7 @@ def main():
     limo = Car(100, 'limo')
     limo.add_fuel(20)
 
+    print(f"Limo has {limo.fuel} fuel.")
+
 
 main()
