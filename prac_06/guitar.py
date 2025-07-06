@@ -9,7 +9,7 @@ class Guitar:
         """Return string representation of guitar """
         return f"{self.name} ({self.year}): ${self.cost:.2f}"
 
-    def get_age(self, current_year):
+    def get_age(self):
         """Return how old the guitar is in years"""
         current_year = 2025
         return current_year - self.year
