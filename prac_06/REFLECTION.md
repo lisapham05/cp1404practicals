@@ -5,7 +5,7 @@ Replace each `...` with your meaningful answer.
 
 ## What have you changed about your process in this subject based on your personal reflection?
 
-...
+I think and plan for the code more than before
 
 ## What do you still need to change in terms of your approach, application, time on task, attitude, etc.?
 
