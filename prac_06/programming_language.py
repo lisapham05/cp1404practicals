@@ -18,7 +18,7 @@ class ProgrammingLanguage:
 
     def is_dynamic(self):
         """ Determine if the programming language is dynamically typed or not """
-        return self.typing  == "dynamic"
+        return self.typing.lower()  == "dynamic"
 
     def __str__(self):
         """ Return a string representation of the ProgrammingLanguage object """
