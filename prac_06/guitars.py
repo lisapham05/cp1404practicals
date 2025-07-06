@@ -1,5 +1,7 @@
 from guitar import Guitar
 
+current_year = 2025
+
 def main():
     print("My guitars!")
 
@@ -7,14 +9,16 @@ def main():
 
     name = input("Name: ")
     while name != "":
-        year = int(input("Year"))
+        year = int(input("Year: "))
         cost = float(input("Cost: $"))
         guitar = Guitar(name, year, cost)
         guitars.append(guitar)
 
         print(f"{guitar} added.")
 
+        name = input("Name: ")
 
+    # For Testing
     guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
 
