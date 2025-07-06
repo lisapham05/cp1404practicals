@@ -1,7 +1,5 @@
 from guitar import Guitar
 
-current_year = 2025
-
 def main():
     print("My guitars!")
 
