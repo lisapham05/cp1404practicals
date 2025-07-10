@@ -24,6 +24,13 @@ class ProgrammingLanguage:
         """Determine if language is dynamically typed."""
         return self.typing == "Dynamic"
 
+    def has_pointer_arithmetic(self):
+        """
+        Determine if the language supports pointer arithmetic.
+        Returns: True if the language supports pointer arithmetic, False otherwise.
+        """
+        return self.pointer_arithmetic
+
 
 def run_tests():
     """Run simple tests/demos on ProgrammingLanguage class."""
