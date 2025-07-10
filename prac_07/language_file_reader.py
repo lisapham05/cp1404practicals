@@ -6,7 +6,6 @@ File and class example - opens/reads a file, stores in objects of custom class
 
 import csv
 from collections import namedtuple
-
 from programming_language import ProgrammingLanguage
 
 
@@ -26,6 +25,8 @@ def main():
         # print(parts)  # debugging
         # Reflection is stored as a string (Yes/No) and we want a Boolean
         reflection = parts[2] == "Yes"
+        # Pointer Arithmetic is stored as a string (Yes/No) and we want a Boolean
+        pointer_arithmetic = parts[4] == "Yes"
         # Construct a ProgrammingLanguage object using the elements
         # year should be an int
         language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]))
@@ -36,7 +37,8 @@ def main():
 
     # Loop through and display all languages (using their str method)
     for language in languages:
-        print(language)
+        if language.has_pointer_arithmetic():
+            print(language.name)
 
 
 main()
