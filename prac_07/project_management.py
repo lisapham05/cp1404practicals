@@ -19,9 +19,19 @@ def main():
     projects = load_projects(FILENAME)
     if projects:
         print(f"Loaded {len(projects)} projects from {FILENAME}")
+    print_menu()
 
 
 
+def print_menu():
+    print("""
+    - (L)oad projects
+    - (S)ave projects
+    - (D)isplay projects
+    - (F)ilter projects by date"
+    - (A)dd new project"
+    - (U)pdate project"
+    - (Q)uit""")
 
 def load_projects(filename):
     """Load projects from file"""
@@ -54,3 +64,5 @@ def display_projects(projects):
     print("Completed projects:")
     for p in complete:
         print(f"  {p}")
+
+print_menu()
