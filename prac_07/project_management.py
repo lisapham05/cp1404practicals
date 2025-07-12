@@ -12,6 +12,17 @@ import os
 
 FILENAME = "projects.txt"
 
+def main():
+    """Main program to display menu"""
+    print("Welcome to Pythonic Project Management")
+
+    projects = load_projects(FILENAME)
+    if projects:
+        print(f"Loaded {len(projects)} projects from {FILENAME}")
+
+
+
+
 def load_projects(filename):
     """Load projects from file"""
     projects = []
