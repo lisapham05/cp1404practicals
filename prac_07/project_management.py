@@ -33,3 +33,13 @@ def save_projects(projects, filename):
             file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t"
                        f"{project.priority}\t{project.cost_estimate}\t{project.completion_percentage}\n")
 
+def display_projects(projects):
+    """Display incomplete and complete projects grouped and sorted by priority"""
+    incomplete = sorted([p for p in projects if not p.is_complete()], key=lambda x: x.priority)
+    complete = sorted([p for p in projects if p.is_complete()], key=lambda x: x.priority)
+    print("Incomplete projects:")
+    for p in incomplete:
+        print(f"  {p}")
+    print("Completed projects:")
+    for p in complete:
+        print(f"  {p}")
