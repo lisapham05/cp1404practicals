@@ -18,44 +18,35 @@ def main():
     projects = load_projects(FILENAME)
     if projects:
         print(f"Loaded {len(projects)} projects from {FILENAME}")
-    print_menu()
 
+    print_menu()
     choice = input(">>> ")
     while choice != 'q':
+        if choice == 'l':
+            filename = input("Filename: ")
+            projects = load_projects(filename)
+        elif choice == 's':
+            filename = input("Filename: ")
+            save_projects(projects, filename)
+        elif choice == 'd':
+            display_projects(projects)
+        elif choice == 'f':
+            filter_projects_by_date(projects)
+        elif choice == 'a':
+            project = add_new_project()
+            projects.append(project)
+        elif choice == 'u':
+            update_project(projects)
+        else:
+            print("Invalid option.")
+
+        print_menu()
         choice = input(">>> ").lower()
 
-    if choice == 'l':
-        filename = input("Filename: ")
-        load_projects(filename)
-
-    elif choice == 's':
-        filename = input("Filename: ")
-        save_projects(projects, filename)
-
-    elif choice == 'd':
-        display_projects(projects)
-
-    elif choice == 'd':
-        display_projects(projects)
-
-    elif choice == 'f':
-        filter_projects_by_date(projects)
-
-    elif choice == 'a':
-        project = add_new_project()
-        projects.append(project)
-
-    elif choice == 'u':
-        update_project(projects)
-
-    elif choice == 'q':
-        save = input(f"Would you like to save to {FILENAME}? ").lower()
-        if save in ['yes', 'y']:
-            save_projects(projects, FILENAME)
-        print("Thank you for using custom-built project management software.")
-    else:
-        print("Invalid option.")
-
+    save = input(f"Would you like to save to {FILENAME}? ").lower()
+    if save in ['yes', 'y']:
+        save_projects(projects, FILENAME)
+    print("Thank you for using custom-built project management software.")
 
 def print_menu():
     """Print menu choices"""
@@ -72,7 +63,7 @@ def load_projects(filename):
     projects = []
     try:
         with open(filename, "r") as file:
-            file.readline()  # Skip header line
+            file.readline()
             for line in file:
                 parts = line.strip().split('\t')
                 if len(parts) == 5:
@@ -108,7 +99,7 @@ def filter_projects_by_date(projects):
     date_str = input("Show projects that start after date (dd/mm/yy): ")
     try:
         filter_date = datetime.strptime(date_str, "%d/%m/%Y").date()
-        filtered = sorted([p for p in projects if p.start_after(filter_date)],
+        filtered = sorted([p for p in projects if p.start_date > filter_date],
                           key=lambda x: x.start_date)
         for p in filtered:
             print(p)
