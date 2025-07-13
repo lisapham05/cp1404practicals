@@ -34,3 +34,10 @@ def load_guitars(filename):
                 guitars.append(Guitar(name, int(year), float(cost)))
     return guitars
 
+def display_guitars(guitars):
+    """Display list of guitars with number in order"""
+    if not guitars:
+        print("No guitars to display.")
+        return
+    for i, guitar in enumerate(guitars, 1):
+        print(f"Guitar {i}: {guitar}")
