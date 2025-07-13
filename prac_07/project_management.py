@@ -139,3 +139,5 @@ def update_project(projects):
             project.priority = int(new_priority)
     except (ValueError, IndexError):
         print("Invalid input.")
+
+main()
