@@ -41,3 +41,21 @@ def display_guitars(guitars):
         return
     for i, guitar in enumerate(guitars, 1):
         print(f"Guitar {i}: {guitar}")
+
+
+def add_new_guitars(guitars):
+    """user add new guitars to the list."""
+    print("Add new guitars (leave name blank to finish):")
+    while True:
+        name = input("Name: ").strip()
+        if not name:
+            break
+        try:
+            year = int(input("Year: "))
+            cost = float(input("Cost: "))
+        except ValueError:
+            print("Invalid input. Please enter a valid year and cost.")
+            continue
+        guitars.append(Guitar(name, year, cost))
+        print(f"{name} ({year}): ${cost:.2f} added.")
+
