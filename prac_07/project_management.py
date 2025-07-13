@@ -95,4 +95,47 @@ def display_projects(projects):
     for p in complete:
         print(f"  {p}")
 
-print_menu()
+def filter_projects_by_date(projects):
+    """
+    Filter and display projects that start after a user-specified date.
+    """
+    date_str = input("Show projects that start after date (dd/mm/yy): ")
+    try:
+        filter_date = datetime.strptime(date_str, "%d/%m/%Y").date()
+        filtered = sorted([p for p in projects if p.start_after(filter_date)],
+                          key=lambda x: x.start_date)
+        for p in filtered:
+            print(p)
+    except ValueError:
+        print("Invalid date format.")
+
+def add_new_project():
+    """
+    Prompt the user to input new project details.
+    """
+    print("Let's add a new project")
+    name = input("Name: ")
+    date_str = input("Start date (dd/mm/yy): ")
+    priority = int(input("Priority: "))
+    cost = float(input("Cost estimate: $"))
+    percent = int(input("Percent complete: "))
+    return Project(name, date_str, priority, cost, percent)
+
+def update_project(projects):
+    """
+    Allow the user to select and update a project’s completion percentage and/or priority.
+    """
+    for i, p in enumerate(projects):
+        print(f"{i} {p}")
+    try:
+        index = int(input("Project choice: "))
+        project = projects[index]
+        print(project)
+        new_percent = input("New Percentage: ")
+        new_priority = input("New Priority: ")
+        if new_percent:
+            project.completion_percentage = int(new_percent)
+        if new_priority:
+            project.priority = int(new_priority)
+    except (ValueError, IndexError):
+        print("Invalid input.")
