@@ -22,3 +22,11 @@ class Project:
         return (f"{self.name}, start: {self.start_date.strftime('%d/%m/%Y')}, "
                 f"priority {self.priority}, estimate: ${self.cost_estimate:.2f}, "
                 f"completion: {self.completion_percentage}%")
+
+    def is_completed(self):
+        """Determine if a project is 100% complete."""
+        return self.completion_percentage == 100
+
+    def __lt__(self, other):
+        """Compare two Project objects by priority."""
+        return self.priority < other.priority
