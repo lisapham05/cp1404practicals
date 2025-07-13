@@ -65,3 +65,6 @@ def save_guitars(filename, guitars):
         writer = csv.writer(file)
         for guitar in guitars:
             writer.writerow([guitar.name, guitar.year, guitar.cost])
+
+if __name__ == "__main__":
+    main()
