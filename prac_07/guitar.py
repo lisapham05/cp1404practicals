@@ -18,3 +18,6 @@ class Guitar:
         """Determine if the guitar is over 50 years or not"""
         return self.get_age() >= 50
 
+    def __lt__(self, other):
+        """Compare guitars by year for sorting"""
+        return self.year < other.year
