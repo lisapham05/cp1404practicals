@@ -21,6 +21,14 @@ def main():
         print(f"Loaded {len(projects)} projects from {FILENAME}")
     print_menu()
 
+    choice = input(">>> ")
+    while choice != 'q':
+        print_menu()
+        choice = input(">>> ").lower()
+
+
+
+
 
 
 def print_menu():
