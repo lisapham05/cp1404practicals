@@ -71,16 +71,16 @@ def print_menu():
 def load_projects(filename):
     """Load projects from file"""
     projects = []
-    with open(filename, 'r') as in_file:
-        in_file.readline()
-        for line in in_file:
-            parts = line.strip().split('\t')
-            name = parts[0]
-            start_date = datetime.strptime(parts[1], "%d/%m/%Y").date()
-            priority = int(parts[2])
-            cost_estimate = float(parts[3])
-            completion_percentage = int(parts[4])
-            projects.append(Project(name, start_date, priority, cost_estimate, completion_percentage))
+    try:
+        with open(filename, "r") as file:
+            file.readline()  # Skip header line
+            for line in file:
+                parts = line.strip().split('\t')
+                if len(parts) == 5:
+                    project = Project(*parts)
+                    projects.append(project)
+    except FileNotFoundError:
+        print(f"File {filename} not found.")
     return projects
 
 def save_projects(projects, filename):
