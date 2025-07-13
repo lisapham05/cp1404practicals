@@ -22,7 +22,6 @@ def main():
 
     choice = input(">>> ")
     while choice != 'q':
-        print_menu()
         choice = input(">>> ").lower()
 
     if choice == 'l':
