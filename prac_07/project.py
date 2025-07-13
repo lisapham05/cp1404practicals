@@ -23,7 +23,7 @@ class Project:
                 f"priority {self.priority}, estimate: ${self.cost_estimate:.2f}, "
                 f"completion: {self.completion_percentage}%")
 
-    def is_completed(self):
+    def is_complete(self):
         """Determine if a project is 100% complete."""
         return self.completion_percentage == 100
 
