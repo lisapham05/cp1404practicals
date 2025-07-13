@@ -8,7 +8,6 @@ Actual Time:
 
 from project import Project
 from datetime import datetime
-import os
 
 FILENAME = "projects.txt"
 
@@ -28,7 +27,7 @@ def main():
 
     if choice == 'l':
         filename = input("Filename: ")
-        projects = load_projects(filename)
+        load_projects(filename)
 
     elif choice == 's':
         filename = input("Filename: ")
@@ -50,11 +49,17 @@ def main():
     elif choice == 'u':
         update_project(projects)
 
-
+    elif choice == 'q':
+        save = input(f"Would you like to save to {FILENAME}? ").lower()
+        if save in ['yes', 'y']:
+            save_projects(projects, FILENAME)
+        print("Thank you for using custom-built project management software.")
+    else:
+        print("Invalid option.")
 
 
 def print_menu():
-    "Print menu choices"
+    """Print menu choices"""
     print("- (L)oad projects"
     "\n- (S)ave projects"
     "\n- (D)isplay projects"
