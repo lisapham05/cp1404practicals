@@ -20,3 +20,17 @@ def main():
 
     save_guitars(FILENAME, guitars)
     print(f"\nGuitars have been saved to {FILENAME}.")
+
+
+
+def load_guitars(filename):
+    """Read guitars file and return list of Guitar objects"""
+    guitars = []
+    with open(filename, 'r', newline='') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if len(row) == 3:
+                name, year, cost = row
+                guitars.append(Guitar(name, int(year), float(cost)))
+    return guitars
+
