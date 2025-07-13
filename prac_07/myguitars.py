@@ -59,3 +59,9 @@ def add_new_guitars(guitars):
         guitars.append(Guitar(name, year, cost))
         print(f"{name} ({year}): ${cost:.2f} added.")
 
+def save_guitars(filename, guitars):
+    """Write the list of guitars to a CSV file."""
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        for guitar in guitars:
+            writer.writerow([guitar.name, guitar.year, guitar.cost])
