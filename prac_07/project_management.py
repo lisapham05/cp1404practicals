@@ -71,14 +71,16 @@ def print_menu():
 def load_projects(filename):
     """Load projects from file"""
     projects = []
-    with open(filename, "r") as file:
-        file.readline()
-        for line in file:
+    with open(filename, 'r') as in_file:
+        in_file.readline()
+        for line in in_file:
             parts = line.strip().split('\t')
-            if len(parts) == 5:
-                project = Project(*parts)
-                projects.append(project)
-
+            name = parts[0]
+            start_date = datetime.strptime(parts[1], "%d/%m/%Y").date()
+            priority = int(parts[2])
+            cost_estimate = float(parts[3])
+            completion_percentage = int(parts[4])
+            projects.append(Project(name, start_date, priority, cost_estimate, completion_percentage))
     return projects
 
 def save_projects(projects, filename):
@@ -145,4 +147,5 @@ def update_project(projects):
     except (ValueError, IndexError):
         print("Invalid input.")
 
-main()
+if __name__ == '__main__':
+    main()
