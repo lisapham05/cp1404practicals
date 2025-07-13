@@ -26,7 +26,29 @@ def main():
         print_menu()
         choice = input(">>> ").lower()
 
+    if choice == 'l':
+        filename = input("Filename: ")
+        projects = load_projects(filename)
 
+    elif choice == 's':
+        filename = input("Filename: ")
+        save_projects(projects, filename)
+
+    elif choice == 'd':
+        display_projects(projects)
+
+    elif choice == 'd':
+        display_projects(projects)
+
+    elif choice == 'f':
+        filter_projects_by_date(projects)
+
+    elif choice == 'a':
+        project = add_new_project()
+        projects.append(project)
+
+    elif choice == 'u':
+        update_project(projects)
 
 
 
