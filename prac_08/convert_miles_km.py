@@ -8,7 +8,7 @@ class ConvertMilesKilometers(App):
     def build(self):
         """ Build kv app from kv file """
         self.title = "Convert Miles to Kilometres"
-        self.root = Builder.load_file('convert_m_km_solution.kv')
+        self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
     def get_validated_miles(self):
@@ -36,3 +36,4 @@ class ConvertMilesKilometers(App):
         self.root.ids.input_miles.text = str(value)
         self.handle_calculate()
 
+ConvertMilesKilometers().run()
