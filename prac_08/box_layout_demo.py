@@ -19,6 +19,12 @@ class BoxLayoutDemo(App):
         name = self.root.ids.input_name.text
         self.root.ids.output_label.text = f"Hello {name}"
 
-
+    def handle_clear(self):
+        """
+        Event handler for the 'Clear' button.
+        Resets both the TextInput and the output Label to be empty.
+        """
+        self.root.ids.input_name.text = ''
+        self.root.ids.output_label.text = ''
 
 BoxLayoutDemo().run()
