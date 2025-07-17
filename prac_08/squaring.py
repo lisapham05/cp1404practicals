@@ -24,3 +24,5 @@ class SquaringApp(App):
         """Clear the input and result fields."""
         self.root.ids.input_number.text = ''
         self.result = ''
+
+SquaringApp().run()
