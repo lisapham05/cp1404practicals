@@ -11,3 +11,15 @@ BoxLayout:
         text: ''
         multiline: False
         input_filter: 'float'
+
+    Button:
+        text: 'Square it!'
+        on_press: app.calculate_square()
+
+    Label:
+        text: 'Result: [b]{}[/b]'.format(app.result)
+        markup: True
+
+    Button:
+        text: 'Clear'
+        on_press: app.clear_fields()
