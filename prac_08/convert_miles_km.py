@@ -21,3 +21,11 @@ class ConvertMilesKilometers(App):
             return value
         except ValueError:
             return 0
+
+    def handle_calculate(self):
+        """ Handle calculation for label widgets """
+        value = self.get_validated_miles()
+        result = value * MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
+
+
