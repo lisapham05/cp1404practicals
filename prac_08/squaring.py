@@ -12,4 +12,11 @@ class SquaringApp(App):
         self.root = Builder.load_file('squaring.kv')
         return self.root
 
+    def calculate_square(self):
+        """Calculate the square of the user's input and update the result property."""
+        try:
+            number = float(self.root.ids.input_number.text)
+            self.result = str(number ** 2)
+        except ValueError:
+            self.result = 'Invalid input'
 
