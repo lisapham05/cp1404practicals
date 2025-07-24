@@ -21,3 +21,4 @@ def main():
     print("Let's drive!")
     print(MENU)
     choice = input(">>> ").lower()
+
