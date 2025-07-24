@@ -4,10 +4,9 @@ Car class
 """
 from car import Car
 
-PRICE_PER_KM = 1.23
-
 
 class Taxi(Car):
+    PRICE_PER_KM = 1.23
     """Specialised version of a Car that includes fare costs."""
 
     def __init__(self, name, fuel):
@@ -21,7 +20,7 @@ class Taxi(Car):
 
     def get_fare(self):
         """Return the price for the taxi trip."""
-        return self.price_per_km * self.current_fare_distance
+        return round(self.PRICE_PER_KM * self.current_fare_distance, 1)
 
     def start_fare(self):
         """Begin a new fare."""
