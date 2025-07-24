@@ -3,7 +3,6 @@ CP1404 - Practical 09
 Taxi Simulator
 """
 
-from car import Car
 from taxi import Taxi
 from silver_service_taxi import SilverServiceTaxi
 
@@ -35,6 +34,19 @@ def main():
             except ValueError:
                 print("Invalid input. Please enter a number.")
 
+        elif choice == "d":
+            if current_taxi:
+                current_taxi.start_fare()
+                try:
+                    distance_to_drive = float(input("Drive how far? "))
+                    current_taxi.drive(distance_to_drive)
+                    trip_cost = current_taxi.get_fare()
+                    print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
+                    total_bill += trip_cost
+                except ValueError:
+                    print("Invalid input. Please enter a valid distance.")
+            else:
+                print("You need to choose a taxi before you can drive")
 
 
 def display_taxis(taxis):
