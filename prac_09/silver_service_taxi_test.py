@@ -8,3 +8,6 @@ def main():
     """Test the SilverServiceTaxi class."""
     hummer_taxi = SilverServiceTaxi("Hummer", 200, 2)
     print(hummer_taxi)
+
+    hummer_taxi.drive(18)
+    print(hummer_taxi)
