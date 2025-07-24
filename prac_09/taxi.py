@@ -2,7 +2,9 @@
 CP1404/CP5632 Practical
 Car class
 """
-from prac_09.car import Car
+from car import Car
+
+PRICE_PER_KM = 1.23
 
 
 class Taxi(Car):
@@ -31,3 +33,5 @@ class Taxi(Car):
         distance_driven = super().drive(distance)
         self.current_fare_distance += distance_driven
         return distance_driven
+
+
