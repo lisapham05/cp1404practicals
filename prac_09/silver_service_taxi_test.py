@@ -13,3 +13,6 @@ def main():
     print(hummer_taxi)
 
     print(f"Current fare: ${hummer_taxi.get_fare():.2f}")
+
+if __name__ == '__main__':
+    main()
