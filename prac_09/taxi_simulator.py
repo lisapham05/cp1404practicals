@@ -48,8 +48,17 @@ def main():
             else:
                 print("You need to choose a taxi before you can drive")
 
+        else:
+            print("Invalid option")
+
+
+        print(f"Bill to date: ${total_bill:.2f}")
+        print(MENU)
+        choice = input(">>> ").lower()
+
 
 def display_taxis(taxis):
     """Display a numbered list of taxis."""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
+
