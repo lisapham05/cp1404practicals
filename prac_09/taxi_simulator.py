@@ -66,3 +66,6 @@ def display_taxis(taxis):
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
 
+if __name__ == '__main__':
+    main()
+
