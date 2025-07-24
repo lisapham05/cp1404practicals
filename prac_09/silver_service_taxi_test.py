@@ -11,3 +11,5 @@ def main():
 
     hummer_taxi.drive(18)
     print(hummer_taxi)
+
+    print(f"Current fare: ${hummer_taxi.get_fare():.2f}")
