@@ -12,4 +12,5 @@ def main():
         print(f"{reliable_car.name} drove {reliable_car.drive(i)}km")
         print(f"{unreliable_car.name} drove {unreliable_car.drive(i)}km")
 
-main()
+    print(reliable_car)
+    print(unreliable_car)
