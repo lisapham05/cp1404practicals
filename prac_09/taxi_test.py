@@ -13,4 +13,5 @@ def main():
 
     my_taxi = Taxi("Prius 1", UNITS_OF_FUEL, PRICE_PER_KM)
 
+    my_taxi.drive(40)
 
