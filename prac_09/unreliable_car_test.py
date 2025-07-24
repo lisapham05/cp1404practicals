@@ -3,6 +3,13 @@ from unreliable_car import UnreliableCar
 
 def main():
     """Test the UnreliableCar class."""
-    # Create instances of UnreliableCar
     reliable_car = UnreliableCar("Mostly Good", 100, 90)
     unreliable_car = UnreliableCar("Dodgy", 100, 9)
+
+    print(f"Attempting to drive {reliable_car.name} and {unreliable_car.name} several times...")
+    for i in range(1, 11):
+        print(f"Attempt {i}:")
+        print(f"{reliable_car.name} drove {reliable_car.drive(i)}km")
+        print(f"{unreliable_car.name} drove {unreliable_car.drive(i)}km")
+
+main()
