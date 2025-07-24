@@ -34,3 +34,10 @@ def main():
                     print("Invalid taxi choice")
             except ValueError:
                 print("Invalid input. Please enter a number.")
+
+
+
+def display_taxis(taxis):
+    """Display a numbered list of taxis."""
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
