@@ -15,3 +15,6 @@ class SilverServiceTaxi(Taxi):
         self.fanciness = fanciness
         self.price_per_km *= self.fanciness
 
+    def __str__(self):
+        """Return a string like a Taxi but with flagfall."""
+        return f"{super().__str__()} plus flagfall of ${self.flagfall:.2f}"
