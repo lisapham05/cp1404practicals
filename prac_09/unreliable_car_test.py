@@ -14,3 +14,6 @@ def main():
 
     print(reliable_car)
     print(unreliable_car)
+
+if __name__ == '__main__':
+    main()
