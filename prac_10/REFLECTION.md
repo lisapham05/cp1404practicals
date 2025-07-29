@@ -39,26 +39,29 @@ repeated code, and adherence to style guides, which in turn has made my own code
 
 ### Good Code Review 1
 
-[]()
+[](https://github.com/lisapham05/cp1404practicals/pull/2)
 
 ### Explanation
 
-...
+My feedback was constructive, specific, and provided a clear, 
+actionable solution that improved the code's readability and maintainability.
 
 ### Good Code Review 2
 
-[]()
+[](https://github.com/lisapham05/cp1404practicals/pull/4)
 
 ### Explanation
 
-...
+This was a good review because it focused on a higher-level structural improvement 
+that aligns with key object-oriented principles taught in the subject.
 
 ## Practicals
 
 ### Regarding the **practical tasks** overall, what would you change if you were in charge of the subject?
 
-...
+If I were in charge, I would consider structuring the practicals around a single, cumulative project that we build upon each week. 
+A larger project could help demonstrate how different components (like file I/O, classes, and GUIs) integrate in a real-world application.
 
 ### What did you do really well for practicals in this subject?
 
-...
+I made a conscious effort not just to "get the code working," but to ensure I was correctly implementing principles like encapsulation and inheritance. 
