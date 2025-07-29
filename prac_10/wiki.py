@@ -18,3 +18,11 @@ def main():
 
         except wikipedia.exceptions.DisambiguationError as e:
             print(f'We need a more specific title. Try one of the following, or a new search:\n{e.options}')
+
+        print()
+        user_search = input("Enter page title: ")
+
+    print("Thank you.")
+
+if __name__ == '__main__':
+    main()
