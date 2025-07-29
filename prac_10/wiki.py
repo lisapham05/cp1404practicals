@@ -13,3 +13,7 @@ def main():
             print(page.title)
             print(page.summary)
             print(page.url)
+        except wikipedia.exceptions.PageError:
+            print(f'Page id "{user_search}" does not match any pages. Try another id!')
+
+
