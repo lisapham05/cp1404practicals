@@ -11,8 +11,6 @@ def hello_world():
 def greet():
     return "Hello"
 
-if __name__ == '__main__':
-    app.run()
 
 if __name__ == '__main__':
     app.run()
