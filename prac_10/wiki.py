@@ -16,4 +16,5 @@ def main():
         except wikipedia.exceptions.PageError:
             print(f'Page id "{user_search}" does not match any pages. Try another id!')
 
-
+        except wikipedia.exceptions.DisambiguationError as e:
+            print(f'We need a more specific title. Try one of the following, or a new search:\n{e.options}')
