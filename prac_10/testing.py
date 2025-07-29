@@ -24,13 +24,21 @@ def is_long_word(word, length=5):
     """
     return len(word) > length
 
-
 def run_tests():
     """Run the tests on the functions."""
     # assert test with no message - used to see if the function works properly
     assert repeat_string("Python", 1) == "Python"
     # the test below should fail
     assert repeat_string("hi", 2) == "hi hi"
+
+    # Test for when a value is passed in for fuel
+    car_with_fuel = Car(fuel=10)
+    assert car_with_fuel.fuel == 10, "Car does not set fuel correctly when a value is passed."
+
+    # Test for default fuel value
+    # This uses the 'test_car' instance from the odometer test above.
+    default_fuel_car = Car()
+    assert default_fuel_car.fuel == 100, "Car does not set default fuel correctly."
 
 
     # assert test with custom message,
